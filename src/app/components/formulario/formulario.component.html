@@ -1,0 +1,49 @@
+ <section>
+    <app-container>
+    <button routerLink="/dashboard" class="voltar-button">
+        <img class="seta-voltar" src="assets/seta.png" alt="seta">
+    </button>
+   
+     <h1>Faça o seu <span>Cadastro</span></h1>
+     <form [formGroup]="contatoForm"(ngSubmit)="salvarContato()">
+        <div>
+           
+            <label>Nome</label>
+            <input type="text" name="nome" id="nome" class="text" required formControlName="nome">
+            @if (contatoForm.get('nome')?.errors && contatoForm.get('nome')?.touched) {
+                <div class="mensagem-erro">Campo obrigatório</div>
+            }
+        </div>
+     
+        <div>
+            <label>Email</label>
+            <input type="email" nome="email" id="email" class="text" required formControlName="email">
+            @if (contatoForm.get('email')?.errors?.['required'] && contatoForm.get('email')?.touched) {
+                <div class="mensagem-erro">Campo obrigatório</div>
+            }
+            @if (contatoForm.get('email')?.errors?.['email'] && contatoForm.get('email')?.touched) {
+                <div class="mensagem-erro">Formato de email inválido</div>
+            }
+        </div>
+       <div>
+        <label>Senha</label>
+        <input type="password" nome="senha" id="senha" class="text" required formControlName="senha">
+        @if (contatoForm.get('senha')?.errors && contatoForm.get('senha')?.touched) {
+            <div class="mensagem-erro">Campo obrigatório</div>
+        }
+        </div>
+        <div class="termos">
+            <input type="checkbox" id="termos" name="termos" value="termos required">
+            <label for="termos">Concordo com os Termos e Condições</label>
+        </div>
+        <div>
+            <button class="submit-button"
+            [disabled]="contatoForm.invalid"
+          >Cadastrar Conta</button>
+     
+     
+        </div>
+     
+     </form>
+    </app-container>
+ </section>

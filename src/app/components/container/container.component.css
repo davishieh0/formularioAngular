@@ -1,0 +1,20 @@
+div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+}
+.container{
+    width: 500px;
+    padding: 30px;
+    border-radius: 4px;
+    background: #080808;
+    border: 0.5px solid #bdbf54a8;
+}
+@media(max-width:650px){
+    .container{
+        border:0px;
+        
+    }
+}

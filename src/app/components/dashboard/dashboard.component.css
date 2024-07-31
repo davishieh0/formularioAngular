@@ -1,0 +1,9 @@
+h1{
+    color: azure;
+}
+button.button-router{
+    background: none;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+}
