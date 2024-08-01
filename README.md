@@ -1,4 +1,6 @@
 # ProjetoFormulario
+![image](https://github.com/user-attachments/assets/0aa17d79-3b0e-4db0-8872-ae73663a20ed)
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.3.
 
